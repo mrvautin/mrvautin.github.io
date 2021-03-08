@@ -13,7 +13,7 @@ tags:
 
 There are many cheap and solid Arduino compatible boards on the market which can be interfaced/controlled using Node.Js. Today we are going to focus on the [WeMos D1 R2 board](https://www.banggood.com/custlink/DGmR9hq9DQ) which can be purchased [here](https://www.banggood.com/custlink/DGmR9hq9DQ).
 
-![a2958102-5e39-4700-aab8-d56d49e67ab2-2](/{{site.BASE_PATH}}content/images/2021/01/a2958102-5e39-4700-aab8-d56d49e67ab2-2.png)
+![a2958102-5e39-4700-aab8-d56d49e67ab2-2](/{{site.base_url}}content/images/2021/01/a2958102-5e39-4700-aab8-d56d49e67ab2-2.png)
 
 This guide assumes you know your way around Node.Js and have it installed along with NPM.
 
@@ -100,6 +100,6 @@ You should see some output like this:
     Board ready
 
 And some light action here:  
- ![IMG_0809]({{site.BASE_PATH}}/{{site.BASE_PATH}}content/images/2021/01/IMG_0809.png)
+ ![IMG_0809]({{site.base_url}}/{{site.base_url}}content/images/2021/01/IMG_0809.png)
 
 <!--kg-card-end: markdown-->

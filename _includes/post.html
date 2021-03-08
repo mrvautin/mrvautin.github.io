@@ -43,12 +43,12 @@
 		<div class="text-center">
 			<div class="btn-group" role="group" aria-label="Basic example">
 				{% if page.previous %}
-				<button type="button" class="btn btn-primary"><a href="{{ site.BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></button>
+				<button type="button" class="btn btn-primary"><a href="{{ site.base_url }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></button>
 				{% else %}
 				<button type="button" class="btn btn-primary disabled"><a>&larr; Previous</a></button>
 				{% endif %}
 				{% if page.next %}
-				<button type="button" class="btn btn-primary"><a href="{{ site.BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></button>
+				<button type="button" class="btn btn-primary"><a href="{{ site.base_url }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></button>
 				{% else %}
 				<button type="button" class="btn btn-primary disable"><a>Next &rarr;</a></button>
 				{% endif %}
