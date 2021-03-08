@@ -262,6 +262,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-paginate
+  jekyll-sitemap
   pygments.rb
 
 BUNDLED WITH
