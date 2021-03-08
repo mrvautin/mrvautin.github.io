@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Interface with Arduino board using Node.Js
+permalink: interface-with-arduino-board-using-node-js
 date: '2021-01-14 03:17:00'
 tags:
 - arduino

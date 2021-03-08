@@ -1,6 +1,7 @@
 ---
 layout: post
 title: adminMongo
+permalink: adminmongo
 date: '2016-04-04 00:05:00'
 tags:
 - adminmongo

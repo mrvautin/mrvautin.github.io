@@ -1,6 +1,7 @@
 ---
 layout: post
 title: fun_plug install Mediatomb on dns-320
+permalink: fun_plug-install-mediatomb-on-dns-320
 date: '2013-10-06 22:00:00'
 tags:
 - fun_plug

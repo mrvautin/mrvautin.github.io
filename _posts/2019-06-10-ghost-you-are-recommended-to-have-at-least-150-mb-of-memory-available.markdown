@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ghost - You are recommended to have at least 150 MB of memory available
+permalink: ghost-you-are-recommended-to-have-at-least-150-mb-of-memory-available
 date: '2019-06-10 01:25:32'
 tags:
 - ghost-tag

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Connecting to MongoDB Atlas with Robo 3T / Robomongo
+permalink: connecting-to-mongodb-atlas-with-robo-3t
 date: '2018-10-10 13:09:18'
 tags:
 - mongodb

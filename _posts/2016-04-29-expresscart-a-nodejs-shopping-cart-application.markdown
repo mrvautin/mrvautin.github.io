@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'expressCart : A Nodejs Shopping Cart application'
+permalink: expresscart-a-nodejs-shopping-cart-application
 date: '2016-04-29 05:19:49'
 tags:
 - nodejs

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Nodejs - Re-use MongoDB database connection in routes
+permalink: re-use-mongodb-database-connection-in-routes
 date: '2018-04-12 20:55:22'
 tags:
 - nodejs

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Cydia: Live NBA scores right on your iPhone lockscreen'
+permalink: cydia-live-nba-scores-right-on-your-iphone-lockscreen
 date: '2015-11-16 21:54:00'
 tags:
 - iphone

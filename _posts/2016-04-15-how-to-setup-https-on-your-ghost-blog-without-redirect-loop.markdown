@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to setup HTTPS on your Ghost blog and avoid redirect loop
+permalink: how-to-setup-https-on-your-ghost-blog-without-redirect-loop
 date: '2016-04-15 00:05:00'
 tags:
 - ghost-tag

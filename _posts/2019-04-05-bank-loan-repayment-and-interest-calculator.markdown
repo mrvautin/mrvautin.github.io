@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Bank Loan repayment and interest calculator
+permalink: bank-loan-repayment-and-interest-calculator
 date: '2019-04-05 23:54:42'
 ---
 

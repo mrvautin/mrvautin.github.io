@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Adjust time on stereo clock for 2006 to 2012 Toyota Corolla
+permalink: adjust-stereo-clock-on-2006-to-2012-toyota-corolla
 date: '2013-10-06 10:02:00'
 tags:
 - toyota

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Convert HTML or a Website to an image file (C#)
+permalink: convert-html-or-a-website-to-an-image-file-c
 date: '2013-03-08 09:34:00'
 tags:
 - html

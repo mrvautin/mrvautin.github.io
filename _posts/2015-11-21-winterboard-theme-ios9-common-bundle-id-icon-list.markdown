@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Winterboard theme iOS9 common Bundle ID / Icon list
+permalink: winterboard-theme-ios9-common-bundle-id-icon-list
 date: '2015-11-21 21:48:00'
 tags:
 - winterboard

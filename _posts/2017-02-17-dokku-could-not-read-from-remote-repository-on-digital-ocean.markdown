@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Dokku - Could not read from remote repository on digital ocean
+permalink: dokku-could-not-read-from-remote-repository-on-digital-ocean
 date: '2017-02-17 08:44:11'
 tags:
 - dokku

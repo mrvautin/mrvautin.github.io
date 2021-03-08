@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Building a reliable and scalable Node.JS SaaS application
+permalink: building-a-reliable-and-scalable-node-js-saas-application
 date: '2017-01-22 03:50:10'
 tags:
 - nodejs

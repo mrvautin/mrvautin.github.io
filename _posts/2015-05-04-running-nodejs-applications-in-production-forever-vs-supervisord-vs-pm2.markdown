@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Running Nodejs applications in production forever vs supervisord vs pm2
+permalink: running-nodejs-applications-in-production-forever-vs-supervisord-vs-pm2
 date: '2015-05-04 10:23:00'
 tags:
 - pm2

@@ -2,6 +2,7 @@
 layout: post
 title: ghostStrap - A minimalist and responsive Bootstrap theme for the Ghost blogging
   platform
+permalink: ghoststrap---a-minimalist-and-responsive-bootstrap-theme-for-the-ghost-blogging-platform
 date: '2016-04-18 07:34:48'
 tags:
 - theme

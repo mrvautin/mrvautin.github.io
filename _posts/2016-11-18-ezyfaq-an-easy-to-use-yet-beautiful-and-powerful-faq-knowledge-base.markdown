@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'ezyFAQ: An easy-to-use yet beautiful  and powerful FAQ/Knowledge base'
+permalink: ezyfaq-an-easy-to-use-yet-beautiful-and-powerful-faq-knowledge-base
 date: '2016-11-18 23:27:00'
 tags:
 - faq

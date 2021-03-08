@@ -1,6 +1,7 @@
 ---
 layout: post
 title: markdownTables - Convert your HTML tables into Markdown syntax online
+permalink: markdowntables-convert-your-html-tables-into-markdown-syntax-online
 date: '2016-05-17 06:47:08'
 tags:
 - markdown

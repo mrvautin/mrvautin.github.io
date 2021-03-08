@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Adding Facebook Open Graph Metadata to your website
+permalink: adding-facebook-open-graph-metadata-to-your-website
 date: '2014-12-31 21:44:00'
 tags:
 - facebook

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: La Marzocco - Machine Vector Art & logos
+permalink: la-marzocco-vector-art
 date: '2021-01-08 06:21:44'
 ---
 

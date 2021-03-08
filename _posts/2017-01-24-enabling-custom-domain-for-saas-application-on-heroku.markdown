@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Enabling custom domain for SaaS application on Heroku
+permalink: enabling-custom-domain-for-saas-application-on-heroku
 date: '2017-01-24 23:40:29'
 tags:
 - saas

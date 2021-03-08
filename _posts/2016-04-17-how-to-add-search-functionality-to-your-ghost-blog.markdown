@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to add search functionality to your Ghost blog
+permalink: how-to-add-search-functionality-to-your-ghost-blog
 date: '2016-04-17 00:34:38'
 tags:
 - blog

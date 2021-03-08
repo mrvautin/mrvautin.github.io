@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to change the post excerpt length in your Ghost theme
+permalink: how-to-change-the-excerpt-length-in-your-ghost-theme
 date: '2016-04-12 00:26:52'
 tags:
 - theme

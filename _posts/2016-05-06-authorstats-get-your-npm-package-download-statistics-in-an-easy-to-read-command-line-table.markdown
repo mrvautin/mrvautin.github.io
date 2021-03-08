@@ -2,6 +2,7 @@
 layout: post
 title: 'authorStats : Get your NPM package download statistics in an easy to read
   command line table'
+permalink: authorstats-get-your-npm-package-download-statistics-in-an-easy-to-read-command-line-table
 date: '2016-05-06 10:37:13'
 tags:
 - nodejs

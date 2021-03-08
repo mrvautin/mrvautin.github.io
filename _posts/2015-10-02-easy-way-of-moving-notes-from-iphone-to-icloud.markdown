@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Easy way of moving notes from iPhone to iCloud
+permalink: easy-way-of-moving-notes-from-iphone-to-icloud
 date: '2015-10-02 10:21:00'
 tags:
 - iphone

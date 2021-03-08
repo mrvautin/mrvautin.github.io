@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Screenshot to clipboard on Apple Mac OSX
+permalink: screenshot-to-clipboard-on-apple-mac-osx
 date: '2018-05-20 04:43:28'
 ---
 

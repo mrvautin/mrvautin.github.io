@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Adding new lines to your IFTTT recipes
+permalink: adding-new-lines-to-your-ifttt-recipes
 date: '2017-01-28 06:30:01'
 tags:
 - facebook

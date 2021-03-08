@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ensure Express App has started before running Mocha/Supertest tests
+permalink: ensure-express-app-started-before-tests
 date: '2016-06-19 05:12:19'
 tags:
 - nodejs

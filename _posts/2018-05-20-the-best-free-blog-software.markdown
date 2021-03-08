@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The best free blog software
+permalink: the-best-free-blog-software
 date: '2018-05-20 05:20:56'
 ---
 

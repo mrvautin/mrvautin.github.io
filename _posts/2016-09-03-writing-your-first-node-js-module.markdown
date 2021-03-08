@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Writing your first Node.js module
+permalink: writing-your-first-node-js-module
 date: '2016-09-03 01:14:52'
 tags:
 - npm

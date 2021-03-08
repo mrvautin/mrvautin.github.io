@@ -1,6 +1,7 @@
 ---
 layout: post
 title: St George Bank WooCommerce Plugin for IPG Hosted Payment Page (HPP)
+permalink: st-george-bank-woocommerce-plugin-for-ipg-hosted-payment-page--hpp
 date: '2013-10-02 04:07:00'
 tags:
 - module

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: openKB - Open Source Nodejs Markdown based knowledge base (FAQ) app
+permalink: openkb-an-open-source-nodejs-knowledge-base-application
 date: '2015-08-02 23:55:00'
 tags:
 - nodejs

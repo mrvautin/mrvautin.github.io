@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to change the post excerpt of your Ghost theme to HTML
+permalink: how-to-change-the-excerpt-text-to-html-formatting
 date: '2016-04-12 00:50:52'
 tags:
 - theme
