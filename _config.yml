@@ -26,7 +26,7 @@ author:
 rss_path: feed.xml
 
 BASE_PATH: https://mrvautin.com
-url: mrvautin.com
+url: https://mrvautin.com
 
 plugins:
   - jekyll-paginate
