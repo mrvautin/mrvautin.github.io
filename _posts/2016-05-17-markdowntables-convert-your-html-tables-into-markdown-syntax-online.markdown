@@ -17,4 +17,4 @@ markdownTables is an online tool which enables you to paste in your HTML table c
 
 [markdownTables](http://markdowntables.mrvautin.com)
 
-![](/content/images/2016/05/markdownTables.png)
+![]({{site.BASE_PATH}}/content/images/2016/05/markdownTables.png)
