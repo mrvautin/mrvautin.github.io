@@ -33,16 +33,16 @@ The application is designed to be easy to use and install and based on search fo
 ### Screenshots
 
 Homepage:
-![Homepage](/content/images/2020/01/expressCart-homepage.png)
+![Homepage]({{site.BASE_PATH}}/content/images/2020/01/expressCart-homepage.png)
 
 Admin manage settings:
-![Admin manage settings](/content/images/2020/03/expressCart-admin-settings.png)
+![Admin manage settings]({{site.BASE_PATH}}/content/images/2020/03/expressCart-admin-settings.png)
 
 Popout cart:
-![Popout cart](/content/images/2020/01/expressCart-popout-cart.png)
+![Popout cart]({{site.BASE_PATH}}/content/images/2020/01/expressCart-popout-cart.png)
 
 Dashboard:
-![Dashboard](/content/images/2020/03/expressCart-admin-dashboard.png)
+![Dashboard]({{site.BASE_PATH}}/content/images/2020/03/expressCart-admin-dashboard.png)
 
 
 ### Running in production
