@@ -14,7 +14,7 @@ Adjusting the clock on the 2006 to 2011 Corolla is not documented anywhere in th
 
 My stereo looks like this:
 
-![](/content/images/2016/04/toyota-stereo.jpg)
+![]({{ site.BASE_PATH }}/content/images/2016/04/toyota-stereo.jpg)
 
 To adjust the time you need to **hold** the 'AM' button and at the same time press the number '1' button to adjust the hour or the number '2' button to adjust the minute.
 
