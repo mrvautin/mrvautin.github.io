@@ -1,0 +1,40 @@
+---
+layout: post
+title: Antlers
+date: '2014-12-29 21:58:00'
+tags:
+- nodejs
+- antlers
+- blog
+- platform
+- express
+- handlebars
+---
+
+A light weight blogging platform built on Node.js and Express. The **antlers** platform is designed to have all the necessary features to get a blog up and running, with minimal fuss and beautiful clean design throughout. Best of all, it's free!
+
+**antlers** allows for easy templating (themes) using the [Handlebars](http://handlebarsjs.com) templating engine and includes a few themes out of the box. 
+
+To get an idea of how your blog will look, take a look around! This blog is powered by **antlers**.
+
+### Installation
+ 
+**Using: [npm](https://www.npmjs.com/package/antlers)**
+
+or
+
+**Manual:**
+
+1. Install Node.js for your relevant server - There is a nice guide here: [http://howtonode.org/how-to-install-nodejs](http://howtonode.org/how-to-install-nodejs)
+2. Download **antlers** from here: [https://github.com/mrvautin/antlers](https://github.com/mrvautin/antlers)
+3. Extract the files and enter the directory via Command/Terminal
+4. Run `npm install` as an administrator (eg: sudo might be required)
+5. Then start the blog using `node app.js`
+6. You're done! You can then view the blog by opening [http://localhost:3333](http://localhost:3333) in a browser
+
+### Admin
+
+You can enter the admin panel of your newly created blog by visiting the following URL in your browser: [http://localhost:3333/admin](http://localhost:3333/admin). The default user login is: *test@test.com* and password is: *password1*. After logging in, you can change the email (username) and password using the "Users" menu.
+
+<hr/>
+Feel free to report any bugs on GitHub and give any feedback/suggestions by commenting below.
