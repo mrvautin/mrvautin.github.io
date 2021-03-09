@@ -54,7 +54,7 @@ Install our dependencies
 `npm i etherport-client johnny-five --save`
 
 1. Your `package.json` should look something like this:
-
+{% highlight json %}
     {
       "name": "nodejs-test",
       "version": "1.0.0",
@@ -67,10 +67,11 @@ Install our dependencies
         "johnny-five": "^2.0.0"
       }
     }
-
+{% endhighlight %}
 1. Now to our Node.Js code. We are going to make the little blue light flash which sits next to the silver `WeMos` chip on our board:
 
 > You will need to change the IP address to the one you found in step 9.
+{% highlight javascript %}
 
     const { EtherPortClient } = require('etherport-client');
     const { Board, Led } = require('johnny-five');
@@ -90,16 +91,16 @@ Install our dependencies
         var led = new Led(LED_PIN);
         led.blink();
     });
-
+{% endhighlight %}
 1. Now run your code and check the output in the console and the light action on your board.
 
 You should see some output like this:
-
+{% highlight bash %}
     1610519728478 SerialPort Connecting to host:port: 192.168.0.201:3030
     1610519728496 Connected Connecting to host:port: 192.168.0.201:3030
     Board ready
-
+{% endhighlight %}
 And some light action here:  
- ![IMG_0809]({{site.base_url}}/{{site.base_url}}content/images/2021/01/IMG_0809.png)
+ ![IMG_0809]({{site.base_url}}/content/images/2021/01/IMG_0809.png)
 
 <!--kg-card-end: markdown-->
