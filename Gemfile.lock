@@ -261,6 +261,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-commonmark-ghpages
   jekyll-paginate
   jekyll-sitemap
   pygments.rb

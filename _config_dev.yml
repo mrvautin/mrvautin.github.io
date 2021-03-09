@@ -28,6 +28,8 @@ rss_path: feed.xml
 base_url: http://127.0.0.1:4000
 url: http://127.0.0.1:4000
 
+markdown: CommonMarkGhPages
+
 plugins:
   - jekyll-paginate
   - jekyll-sitemap

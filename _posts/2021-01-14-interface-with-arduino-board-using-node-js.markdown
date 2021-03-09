@@ -21,85 +21,81 @@ Firsly you are going to want to setup your board in the Arduino IDE. We will be 
 
 1. Select the board in the Arduino IDE:
 
-`Tools > Board > ESP8266 Boards > WeMos D1 R2`
+    `Tools > Board > ESP8266 Boards > WeMos D1 R2`
+2. Plugin your board using a USB cable
+3. Open the Wifi firmware:
 
-1. Plugin your board using a USB cable
-2. Open the Wifi firmware:
+    `File > Examples > Firmata > StandardFirmataWifi`
 
-`File > Examples > Firmata > StandardFirmataWifi`
+4. You are going to need to setup your Wifi SSID and Passphrase in the `WifiConfig.h` file. You shouldn't need to touch the `StandardFirmataWifi.h` file at all.
 
-1. 
+5. Scroll to the section which has the Wifi SSID configuration and enter the name of your Wifi network (SSID):
+    {% highlight c++ %}
+        // replace this with your wireless network SSID
+        char ssid[] = "your_network_name";
+    {% endhighlight %}
+6. Scroll to the section which has the Security configuration and enter your passphrase or Wifi password:
+    {% highlight c++ %}
+        #ifdef WIFI_WPA_SECURITY
+        char wpa_passphrase[] = "your_wpa_passphrase";
+        #endif //WIFI_WPA_SECURITY
+    {% endhighlight %}
+7. Thats it. You can now compile and upload the code to your board using the `Upload` button
+8. Once that is complete, your board will reset and hopefully connect to your Wifi network.
+9. You can now login to your router to check the Wireless clients and determine the IP address of your board. At this point you might like to reserve an IP address using the MAC address for your board so it doesn't change on restart and kill your Node.Js code.
+10. Now we are going to setup our Node.Js code to do some simple requests/commands.
 
-You are going to need to setup your Wifi SSID and Passphrase in the `WifiConfig.h` file. You shouldn't need to touch the `StandardFirmataWifi.h` file at all.
+    Install our dependencies  
+    `npm i etherport-client johnny-five --save`
 
-2. 
-
-Scroll to the section which has the Wifi SSID configuration and enter the name of your Wifi network (SSID):
-
-    // replace this with your wireless network SSID
-    char ssid[] = "your_network_name";
-
-1. Scroll to the section which has the Security configuration and enter your passphrase or Wifi password:
-
-    #ifdef WIFI_WPA_SECURITY
-    char wpa_passphrase[] = "your_wpa_passphrase";
-    #endif //WIFI_WPA_SECURITY
-
-1. Thats it. You can now compile and upload the code to your board using the `Upload` button
-2. Once that is complete, your board will reset and hopefully connect to your Wifi network.
-3. You can now login to your router to check the Wireless clients and determine the IP address of your board. At this point you might like to reserve an IP address using the MAC address for your board so it doesn't change on restart and kill your Node.Js code.
-4. Now we are going to setup our Node.Js code to do some simple requests/commands.
-
-Install our dependencies  
-`npm i etherport-client johnny-five --save`
-
-1. Your `package.json` should look something like this:
-{% highlight json %}
+11. Your `package.json` should look something like this:
+    {% highlight json %}
     {
-      "name": "nodejs-test",
-      "version": "1.0.0",
-      "description": "",
-      "main": "index.js",
-      "author": "",
-      "license": "ISC",
-      "dependencies": {
-        "etherport-client": "^0.1.4",
-        "johnny-five": "^2.0.0"
-      }
+        "name": "nodejs-test",
+        "version": "1.0.0",
+        "description": "",
+        "main": "index.js",
+        "author": "",
+        "license": "ISC",
+        "dependencies": {
+            "etherport-client": "^0.1.4",
+            "johnny-five": "^2.0.0"
+        }
     }
-{% endhighlight %}
-1. Now to our Node.Js code. We are going to make the little blue light flash which sits next to the silver `WeMos` chip on our board:
+    {% endhighlight %}
+12. Now to our Node.Js code. We are going to make the little blue light flash which sits next to the silver `WeMos` chip on our board:
 
-> You will need to change the IP address to the one you found in step 9.
-{% highlight javascript %}
+    > You will need to change the IP address to the one you found in step 9.
+    {% highlight javascript %}
 
-    const { EtherPortClient } = require('etherport-client');
-    const { Board, Led } = require('johnny-five');
-    
-    const board = new Board({
-        port: new EtherPortClient({
-            host: '192.168.0.201',
-            port: 3030
-        }),
-        repl: false
-    });
-    
-    const LED_PIN = 2;
-    
-    board.on('ready', () => {
-        console.log('Board ready');
-        var led = new Led(LED_PIN);
-        led.blink();
-    });
-{% endhighlight %}
-1. Now run your code and check the output in the console and the light action on your board.
+        const { EtherPortClient } = require('etherport-client');
+        const { Board, Led } = require('johnny-five');
+        
+        const board = new Board({
+            port: new EtherPortClient({
+                host: '192.168.0.201',
+                port: 3030
+            }),
+            repl: false
+        });
+        
+        const LED_PIN = 2;
+        
+        board.on('ready', () => {
+            console.log('Board ready');
+            var led = new Led(LED_PIN);
+            led.blink();
+        });
+    {% endhighlight %}
+13. Now run your code and check the output in the console and the light action on your board.
 
-You should see some output like this:
-{% highlight bash %}
-    1610519728478 SerialPort Connecting to host:port: 192.168.0.201:3030
-    1610519728496 Connected Connecting to host:port: 192.168.0.201:3030
-    Board ready
-{% endhighlight %}
+    You should see some output like this:
+    {% highlight bash %}
+        1610519728478 SerialPort Connecting to host:port: 192.168.0.201:3030
+        1610519728496 Connected Connecting to host:port: 192.168.0.201:3030
+        Board ready
+    {% endhighlight %}
+
 And some light action here:  
  ![IMG_0809]({{site.base_url}}/content/images/2021/01/IMG_0809.png)
 
