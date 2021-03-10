@@ -19,32 +19,31 @@ Firstly you will want to create your `db.js` file which will export some handy d
 
 File: `db.js`
 
-``` javascript
-const mongoClient = require('mongodb').MongoClient;
-const mongoDbUrl = 'mongodb://127.0.0.1:27017';
-let mongodb;
+{% highlight javascript %}
+    const mongoClient = require('mongodb').MongoClient;
+    const mongoDbUrl = 'mongodb://127.0.0.1:27017';
+    let mongodb;
 
-function connect(callback){
-    mongoClient.connect(mongoDbUrl, (err, db) => {
-        mongodb = db;
-        callback();
-    });
-}
-function get(){
-    return mongodb;
-}
+    function connect(callback){
+        mongoClient.connect(mongoDbUrl, (err, db) => {
+            mongodb = db;
+            callback();
+        });
+    }
+    function get(){
+        return mongodb;
+    }
 
-function close(){
-    mongodb.close();
-}
+    function close(){
+        mongodb.close();
+    }
 
-module.exports = {
-    connect,
-    get,
-    close
-};
-
-```
+    module.exports = {
+        connect,
+        get,
+        close
+    };
+{% endhighlight %}
 
 After creating this file you can simply `require` it and you now have few functions at our disposal. `connect`, `get`, `close`. 
 
@@ -55,13 +54,13 @@ File: `app.js`
 
 You will then want to call `connect()` before your application starts and the server starts listening. Eg:
 
-``` javascript
-db.connect(() => {
-    app.listen(process.env.PORT || 5555, function (){
-        console.log(`Listening`);
+{% highlight javascript %}
+    db.connect(() => {
+        app.listen(process.env.PORT || 5555, function (){
+            console.log(`Listening`);
+        });
     });
-});
-```
+{% endhighlight %}
 
 Now you have access to your database connection anywhere in your application by simply requiring the `db.js` file and using the `get()` function. 
 
@@ -69,7 +68,7 @@ Now you have access to your database connection anywhere in your application by 
 
 File: `users.js` (routes file for example)
 
-``` javascript
+{% highlight javascript %}
 const db = require('./db');
 
 router.get('/users', (req, res) => {
@@ -78,6 +77,6 @@ router.get('/users', (req, res) => {
             console.log('Users', users);
         });
 });
-```
+{% endhighlight %}
 
 It just makes everything much cleaner and easy to handle this way. I hope this helped you in some way.

@@ -22,7 +22,7 @@ You can see our `multiply()` function takes two values, multiplies them and retu
 
 File: `multiply.js`
 
-``` javascript
+{% highlight javascript %}
 // require any modules
 
 module.exports = {
@@ -35,7 +35,7 @@ module.exports = {
 function nonPublic(){
     return 'Result: ';
 }
-```
+{% endhighlight %}
 
 ---
 
@@ -43,7 +43,7 @@ File: `test.js`
 
 Using our new module locally for testing is easy:
 
-``` javascript
+{% highlight javascript %}
 var mod = require('./module');
 
 console.log(mod.nonPublic());
@@ -51,7 +51,7 @@ console.log(mod.nonPublic());
 mod.multiply(5, 10, function(err, result){
     console.log(result);
 });
-``` 
+{% endhighlight %}
 
 The first line requires our local module. **Note: the `./` value for modules located in the same directory.**
 
@@ -61,9 +61,7 @@ We pass in `5` and `10` to be multiplied together and we write the result to the
 
 To run our `test.js` script we simply run the following in our console and observe the output: 
 
-```
-node test.js
-```
+`node test.js`
 
 #### Conclusion
 This is a really basic module which outlines the basic steps to get started on writing your first NPM module.

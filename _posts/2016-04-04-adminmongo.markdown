@@ -23,10 +23,6 @@ adminMongo is a Web based user interface (GUI) to handle all your MongoDB connec
 3. Start application: `npm start`
 4. Visit [http://127.0.0.1:1234](http://127.0.0.1:1234) in your browser
 
-## Demo (read only)
-
-A read only demo can be seen [here](http://adminmongo.mrvautin.com) 
-
 ## Features
 
 * Manage from a connection level for easy access to multiple databases
@@ -38,7 +34,6 @@ A read only demo can be seen [here](http://adminmongo.mrvautin.com)
 * Collection statistics
 * Export collections in JSON format
 
-
 ### Limitations
 
 * Documents need to have an "_id" value which is a string, integer, or MongoDB ObjectId. Documents using Composite ID indexing is currently not supported.
@@ -48,7 +43,8 @@ A read only demo can be seen [here](http://adminmongo.mrvautin.com)
 adminMongo will listen on host: `localhost` and  port: `1234` by default. 
 This can be overwritten by adding a config file in `/config/app.json`. The config file can also override the default 5 docs per page.
 The config file options are:
-```
+
+{%highlight json %}
 {
     "app": {
         "host": "10.0.0.1",
@@ -56,9 +52,7 @@ The config file options are:
         "docs_per_page": 15
     }
 }
-```
-
-**Note: Any changes to the config file requires a restart of the application**
+{% endhighlight %}
 
 ## Usage
 
@@ -68,22 +62,14 @@ After visiting [http://127.0.0.1:1234](http://127.0.0.1:1234) you will be presen
 
 Note: The connection can be either local or remote hosted on VPS or MongoDB service such as MongoLab.
 
-![adminMongo connections screen](https://raw.githubusercontent.com/mrvautin/mrvautin.github.io/master/images/adminMongo/adminMongo_connections.png "adminMongo connections screen")
-*The Connection setup screen*
 
 ##### Connection/Database admin
 
 After opening your newly created connection, you are able to see all database objects associated with your connection. Here you can create/delete collections, create/delete users and see various stats for your database.
 
-![adminMongo database screen](https://raw.githubusercontent.com/mrvautin/mrvautin.github.io/master/images/adminMongo/adminMongo_dbview.png "adminMongo database screen")
-*The connections/database screen*
-
 ##### Collections
 
 After selecting your collection from the "Database Objects" menu, you will be presented with the collections screen. Here you can see documents in pagination form, create new documents, search documents, delete, edit documents and view/add indexes to your collection.
-
-![adminMongo collections screen](https://raw.githubusercontent.com/mrvautin/mrvautin.github.io/master/images/adminMongo/adminMongo_collectionview.png "adminMongo collections screen")
-*The collections screen*
 
 ##### Searching documents
 
@@ -91,22 +77,14 @@ You can search documents using the `Search documents` button on the collections 
 
 > You can clear your search by clicking the `Reset` button on the collections screen.
 
-![adminMongo search documents](https://raw.githubusercontent.com/mrvautin/mrvautin.github.io/master/images/adminMongo/adminMongo_searchdocuments.png "adminMongo search documents")
-*The collections screen*
-
 ##### Documents
 
 Adding and editing documents is done using a JSON syntax highlighting control.
 
-![adminMongo documents](https://raw.githubusercontent.com/mrvautin/mrvautin.github.io/master/images/adminMongo/adminMongo_docedit.png "adminMongo documents")
-*Editing a document*
 
 ##### Indexes
 
 Indexes can be added from the collection screen. Please see the [official MongoDB documentation](https://docs.mongodb.org/manual/indexes/) on adding indexes.
-
-![adminMongo documents](https://raw.githubusercontent.com/mrvautin/mrvautin.github.io/master/images/adminMongo/adminMongo_manageindexes.png "adminMongo indexes")
-*Viewing/Adding indexes*
 
 ## Contributing
 

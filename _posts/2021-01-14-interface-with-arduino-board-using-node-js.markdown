@@ -98,5 +98,3 @@ Firsly you are going to want to setup your board in the Arduino IDE. We will be 
 
 And some light action here:  
  ![IMG_0809]({{site.base_url}}/content/images/2021/01/IMG_0809.png)
-
-<!--kg-card-end: markdown-->

@@ -17,7 +17,7 @@ It essentially dynamically sets up a WebBrowser control, loads a URL (waits for 
 
 It's quite simple really. Here is the function to render the HTML:
 
-```
+{% highlight c# %}
     public Bitmap GenerateScreenshot(string url)
     {
         // Load the webpage into a WebBrowser control
@@ -41,12 +41,14 @@ It's quite simple really. Here is the function to render the HTML:
 
         return bitmap;
     }
-```
+{% endhighlight %}
 
 You can call it by:
-```
-Bitmap thumbnail = GenerateScreenshot("www.google.com");  thumbnail.Save("C:\image file.bmp", ImageFormat.Bmp);
-```
+
+{% highlight c# %}
+    Bitmap thumbnail = GenerateScreenshot("www.google.com");
+    thumbnail.Save("C:\image file.bmp", ImageFormat.Bmp);
+{% endhighlight %}
 
 Notes:  You can also use `C:\test.html` rather than `www.google.com` and you can change the output file by adjusting the `ImageFormat` value. 
 

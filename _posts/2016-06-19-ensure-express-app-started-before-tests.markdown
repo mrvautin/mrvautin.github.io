@@ -20,18 +20,18 @@ You will need to setup the event emitter in your Express app which is the final 
 
 Here is an example:
 
-```
+{%highlight javascript %}
 app.listen(app_port, app_host, function () {
     console.log('App has started');
     app.emit("appStarted");
 });
-```
+{% endhighlight %}
 
 The specific line is:
 
-```
+{%highlight javascript %}
 app.emit("appStarted");
-```
+{% endhighlight %}
 
 This creates an event which we can wait on called `appStarted` (this can be changed to whatever you want).
 
@@ -39,30 +39,30 @@ Next we need to wait for this event in our Mocha/Supertest tests (`test.js`).
 
 First we will `require` our Express app. Note: `app` is my main Express file, some people use `server.js` and this value would then become `require('../server')`:
 
-```
+{%highlight javascript %}
 app = require('../app');
-```
+{% endhighlight %}
 
 We then need to create a Supertest agent using our Express instance:
 
-```
+{%highlight javascript %}
 var request = require("supertest");
 var agent = request.agent(app);
-```
+{% endhighlight %}
 
 Then we wait for our Express event using `before()`:
 
-```
+{%highlight javascript %}
 before(function (done) {
     app.on("adminMongoStarted", function(){
         done();
     });
 });
-```
+{% endhighlight %}
 
 Then we can kick off all our tests. A full test example:
 
-```
+{%highlight javascript %}
 var request = require("supertest");
 var assert = require('chai').assert;
 
@@ -83,4 +83,4 @@ describe("Add config",function(){
             .expect("Config successfully added", done);
     });
 });
-```
+{% endhighlight %}

@@ -98,7 +98,7 @@ You the want to create the config for your application
 
 The following is a very basic config to run your application. Basically it will listen for requests to `mydomain.com` on HTTP and forward those requests to our app (running with a process manager above) on port `4444`. You will need to change that port to whatever port your app is running/listening on. 
 
-```
+{% highlight nginx %}
 server {
     listen 80;
     server_name mydomain.com;
@@ -112,7 +112,7 @@ server {
         proxy_cache_bypass $http_upgrade;
     }
 }
-```
+{% endhighlight %}
 
 You can then save this file and test your Nginx config with:
 
@@ -120,10 +120,10 @@ You can then save this file and test your Nginx config with:
 
 All going well, you should get something like this:
 
-```
+{% highlight bash %}
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
-```
+{% endhighlight %}
 
 If not, check the error and adjust your config to resolve.
 

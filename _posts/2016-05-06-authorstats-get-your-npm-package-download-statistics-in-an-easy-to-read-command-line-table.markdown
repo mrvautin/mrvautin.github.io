@@ -20,15 +20,11 @@ tags:
 
 It's best to install the package globally:
 
-```
-npm install author-stats -g
-```
+`npm install author-stats -g`
 
 ### Usage
 
-```
-authorStats <npm username>
-```
+`authorStats <npm username>`
 
 Where `<npm username>` is the username on the NPM website. My profile is: `https://www.npmjs.com/~mrvautin` and username is `mrvautin`.
 

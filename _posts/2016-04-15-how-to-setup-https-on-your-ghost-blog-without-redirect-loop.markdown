@@ -18,12 +18,14 @@ If you are wanting to setup your Ghost blog URL to be `HTTPS` (SSL), you will ne
 
 The production section of your Ghost `config.js` will look something like this:
 
-```
+{%highlight javascript %}
 production: {
-        url: 'https://mrvautin.com',
-        mail: {},
-        database: {
-```
+	url: 'https://mrvautin.com',
+	mail: {},
+	database: {}
+}
+
+{% endhighlight %}
 
 Depending on your web server the setting is slightly different. We are going to cover off `Apache` and `Nginx` as they are most popular.
 
@@ -31,26 +33,24 @@ Depending on your web server the setting is slightly different. We are going to 
 
 A simple `Nginx` config would look like:
 
-```
+{%highlight nginx %}
 server {
-        listen 443 ssl;
-        server_name mrvautin.com www.mrvautin.com;
-        # SSL STUFF
+	listen 443 ssl;
+	server_name mrvautin.com www.mrvautin.com;
+	# SSL STUFF
 
-        location / {
-                proxy_set_header        X-Real-IP $remote_addr;
-                proxy_set_header        Host    $http_host;
-                proxy_pass              http://127.0.0.1:2368;
-                proxy_set_header        X-Forwarded-Proto $scheme;
-        }
+	location / {
+		proxy_set_header        X-Real-IP $remote_addr;
+		proxy_set_header        Host    $http_host;
+		proxy_pass              http://127.0.0.1:2368;
+		proxy_set_header        X-Forwarded-Proto $scheme;
+	}
 }
-```
+{% endhighlight %}
 
 The important line above is:
 
-```
-proxy_set_header        X-Forwarded-Proto $scheme;
-```
+`proxy_set_header        X-Forwarded-Proto $scheme;`
 
 This line ensures the Header which Ghost reads has the correct protocol set.
 
@@ -58,7 +58,7 @@ This line ensures the Header which Ghost reads has the correct protocol set.
 
 A simple `Apache` virtual host config would look like:
 
-```
+{%highlight xml %}
 <VirtualHost *:443>
     RequestHeader set X-Forwarded-Proto "https"
     ProxyPreserveHost On
@@ -75,13 +75,11 @@ A simple `Apache` virtual host config would look like:
     ProxyPass / http://127.0.0.1:2368
     ProxyPassReverse / http://127.0.0.1:2368
 </VirtualHost>
-```
+{% endhighlight %}
 
 The important line above is:
 
-```
-RequestHeader set X-Forwarded-Proto "https"
-```
+`RequestHeader set X-Forwarded-Proto "https"`
 
 This line ensures the Header which Ghost reads has the correct protocol set.
 

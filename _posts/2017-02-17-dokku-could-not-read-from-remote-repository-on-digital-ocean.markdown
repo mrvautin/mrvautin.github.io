@@ -12,5 +12,5 @@ Firing up a digital ocean droplet with one-click dokku should be easy right? Yea
 
 You simply need to run:
 
-```cat ~/.ssh/id_rsa.pub | ssh root@droplet_ip_address "sudo sshcommand acl-add dokku laptop"```
+`cat ~/.ssh/id_rsa.pub | ssh root@droplet_ip_address "sudo sshcommand acl-add dokku laptop"`
 

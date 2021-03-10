@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Metaget - Nodejs module to fetch remote Meta Tags (including Open Graph) from
+title: metaget - Nodejs module to fetch remote Meta Tags (including Open Graph) from
   URL
 permalink: metaget
 date: '2016-04-11 06:02:50'
@@ -16,13 +16,11 @@ A Node.js module to fetch HTML meta tags (including Open Graph) from a remote UR
 
 ## Installation
 
-```
-npm install metaget --save
-```
+`npm install metaget --save`
 
 ## Usage
 
-``` javascript
+{% highlight javascript %}
 var metaget = require("metaget");
 metaget.fetch('https://wordpress.com', function (err, meta_response) {
 	if(err){
@@ -31,13 +29,13 @@ metaget.fetch('https://wordpress.com', function (err, meta_response) {
 		console.log(meta_response);
 	}
 });
-```
+{% endhighlight %}
 
 Response will be a Javascript Object containing all the meta tags from the URL. All tags are output in the example above. Some tags with illegal characters can be accessed by:
 
-``` javascript
+{% highlight javascript %}
 meta_response["og:title"];
-```
+{% endhighlight %}
 
 ## Options
 
@@ -45,7 +43,7 @@ It's possible to set any HTTP headers in the request. This can be done by specif
 
 This is how you would specify a "User-Agent" of a Google Bot:
 
-``` javascript
+{% highlight javascript %}
 var metaget = require("metaget");
 metaget.fetch('https://wordpress.com',{headers:{"User-Agent": "Googlebot"}}, function (err, meta_response) {
 	if(err){
@@ -54,8 +52,7 @@ metaget.fetch('https://wordpress.com',{headers:{"User-Agent": "Googlebot"}}, fun
 		console.log(meta_response);
 	}
 });
-```
-
+{% endhighlight %}
 
 ## Contributing
 

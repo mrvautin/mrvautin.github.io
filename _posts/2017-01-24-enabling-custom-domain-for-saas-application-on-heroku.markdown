@@ -29,7 +29,7 @@ You will then want to setup your proxy server. I spun up a new [Digital Ocean](h
 
 The Nginx config would look like this:
 
-```
+{%highlight bash %}
 server {
     listen 80 default_server;
 
@@ -44,7 +44,7 @@ server {
         proxy_pass          http://my_heroku_app_name.herokuapp.com;
     }
 }
-```
+{% endhighlight %}
 
 Basically what is happening is your Nginx server is adding the `Host` header and proxing the request onto Heroku. The Heroku router will then read the `Host` header and determine which application to select. It's then that your application will need to determine the domain in the request and serve the correct SaaS user.
 
