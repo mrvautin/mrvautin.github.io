@@ -1,61 +1,60 @@
-<div class="page-header text-center">
-  <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
-</div>
-	
 <article>
-	<div class="col-sm-10">
-	 <span class="post-date text-muted">
-	   {% assign d = page.date | date: "%d" | plus:'0' %}
-	   {{ page.date | date: "%B" }} 
-	   {% case d %}
-	     {% when 1 or 21 or 31 %}{{ d }}st,
-	     {% when 2 or 22 %}{{ d }}nd,
-	     {% when 3 or 23 %}{{ d }}rd,
-	     {% else %}{{ d }}th,
-	   {% endcase %}
-	   {{ page.date | date: "%Y" }}
-	 </span>
-	  <div class="article_body">
-	  {{ content }}
-	  </div>
+	<div class="col-md-10 offset-md-1">
+		<div class="page-header text-center">
+			<h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+		</div>
+		<span class="post-date text-muted">
+			{% assign d = page.date | date: "%d" | plus:'0' %}
+			{{ page.date | date: "%B" }}
+			{% case d %}
+			{% when 1 or 21 or 31 %}{{ d }}st,
+			{% when 2 or 22 %}{{ d }}nd,
+			{% when 3 or 23 %}{{ d }}rd,
+			{% else %}{{ d }}th,
+			{% endcase %}
+			{{ page.date | date: "%Y" }}
+		</span>
+		<div class="article_body">
+			{{ content }}
+		</div>
 		<div>
-      <section class="share col-sm-6">
-        <h4 class="section-title">Share Post</h4>
-        <a class="btn btn-default btn-sm twitter" href="https://twitter.com/share?text={{page.title | encode}}{% if site.author.twitter%}&via={{site.author.twitter}}{% endif %}"
-           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-          <i class="fa fa-twitter fa-lg"></i>
-          Twitter
-        </a>
-        <a class="btn btn-default btn-sm facebook" href="https://www.facebook.com/sharer/sharer.php"
-           onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-          <i class="fa fa-facebook fa-lg"></i>
-          Facebook
-        </a>
-        <a class="btn btn-default btn-sm gplus"
-           onclick="window.open('https://plus.google.com/share?url='+window.location.href, 'google-plus-share', 'width=490,height=530');return false;">
-          <i class="fa fa-google-plus fa-lg"></i>
-          Google+
-        </a>
-      </section>
-    </div>
+			<section class="share">
+				<h4 class="section-title">Share Post</h4>
+				<a class="btn btn-default btn-sm twitter"
+					href="https://twitter.com/share?text={{page.title | encode}}{% if site.author.twitter%}&via={{site.author.twitter}}{% endif %}"
+					onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+					<i class="fa fa-twitter fa-lg"></i>
+					Twitter
+				</a>
+				<a class="btn btn-default btn-sm facebook" href="https://www.facebook.com/sharer/sharer.php"
+					onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+					<i class="fa fa-facebook fa-lg"></i>
+					Facebook
+				</a>
+				<a class="btn btn-default btn-sm gplus"
+					onclick="window.open('https://plus.google.com/share?url='+window.location.href, 'google-plus-share', 'width=490,height=530');return false;">
+					<i class="fa fa-google-plus fa-lg"></i>
+					Google+
+				</a>
+			</section>
+		</div>
 
-    <div class="clearfix"></div>
 		<div class="text-center">
 			<div class="btn-group" role="group" aria-label="Basic example">
 				{% if page.previous %}
-				<button type="button" class="btn btn-primary"><a href="{{ site.base_url }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></button>
+				<button type="button" class="btn btn-primary"><a href="{{ site.base_url }}{{ page.previous.url }}"
+						title="{{ page.previous.title }}">&larr; Previous</a></button>
 				{% else %}
 				<button type="button" class="btn btn-primary disabled"><a>&larr; Previous</a></button>
 				{% endif %}
 				{% if page.next %}
-				<button type="button" class="btn btn-primary"><a href="{{ site.base_url }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></button>
+				<button type="button" class="btn btn-primary"><a href="{{ site.base_url }}{{ page.next.url }}"
+						title="{{ page.next.title }}">Next &rarr;</a></button>
 				{% else %}
 				<button type="button" class="btn btn-primary disable"><a>Next &rarr;</a></button>
 				{% endif %}
-		  </div>
-		<hr>
+			</div>
+			<hr>
+		</div>
 	</div>
-	
-	<div class="col-sm-2 sidebar-2"></div>
 </article>
-<div class="clearfix"></div>
