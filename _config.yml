@@ -7,6 +7,7 @@ highlighter: rouge
 disqus: mrvautin
 google_analytics: UA-7038832-3
 title: mrvautin
+timezone: Australia/Adelaide
 
 defaults:
   -
