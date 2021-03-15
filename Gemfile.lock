@@ -263,6 +263,7 @@ DEPENDENCIES
   github-pages
   jekyll-commonmark-ghpages
   jekyll-paginate
+  jekyll-seo-tag
   jekyll-sitemap
   pygments.rb
 

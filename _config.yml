@@ -32,3 +32,4 @@ markdown: CommonMarkGhPages
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-seo-tag
