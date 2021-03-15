@@ -5,7 +5,7 @@ tagline:
 
 {% for post in paginator.posts %}
 
-<div class="col-md-10 offset-md-1">
+<div class="col-md-8 offset-md-2" style="min-height: 200px;">
   <article class="home">
     <span class="post-date text-muted">
       {% assign d = post.date | date: "%d" | plus:'0' %}
@@ -30,9 +30,13 @@ tagline:
       {% elsif post.description %}
       {{ post.description }}
       {% else %}
-      {{ post.excerpt }}
+      <!-- {{ post.excerpt }} -->
+      {{ post.content | strip_html | truncatewords: 100 }}
       {% endif %}
       {% endif %}
+      
+      <div class="mt-3"><a class="btn btn-secondary" href="{{ site.base_url }}{{ post.url }}">Read more</a></div>
+      <div class="dropdown-divider"></div>
     </div>
   </article>
 </div>
