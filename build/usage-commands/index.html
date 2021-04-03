@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Usage / Commands</title>
+    <meta property="og:title" content="Usage / Commands" />
+    <meta name="twitter:title" value="Usage / Commands" />
+    <meta name="description" itemprop="description" content="Getting started with the squido commands" />
+    <meta property="og:description" content="Getting started with the squido commands" />
+    <meta name="twitter:description" value="Getting started with the squido commands" />
+    <link rel="canonical" href="http://localhost:4965/usage-commands" />
+    <link rel="icon" type="image/png" href="/content/images/favicon.png" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://localhost:4965/usage-commands" />
+    <meta property="og:site_name" content="squido" />
+    <meta name="twitter:card" value="summary" />
+    <meta name="twitter:url" value="http://localhost:4965/usage-commands" />
+    <meta name="twitter:site" value="@mrvautin" />
+    <link rel="alternate" type="application/rss+xml" href="http://localhost:4965/rss" />
+    <link rel="alternate" type="application/atom+xml" href="http://localhost:4965/atom" />
+    <link rel="alternate" type="application/json" href="http://localhost:4965/json" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap.min.css" integrity="sha512-aqT9YD5gLuLBr6ipQAS+72o5yHKzgZbGxEh6iY8lW/r6gG14e2kBTAJb8XrxzZrMOgSmDqtLaF76T0Z6YY2IHg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/content/stylesheets/style.css">
+    <link rel="stylesheet" href="/content/stylesheets/syntax.css">
+    <script src="/content/javascripts/site.js"></script>
+  </head>
+  <body>
+    <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom">
+        <div class="h4 my-0 me-md-auto brand">
+          <a class="navbar-brand" href="/">
+              <img src="/content/images/squido.svg" alt="" width="70" height="70" class="d-inline-block align-text-top">squido
+          </a>
+        </div>
+        <nav class="my-2 my-md-0 me-md-3">
+            <a class="p-2 text-dark" href="/">Home</a>
+            <a class="p-2 text-dark" target="_blank" href="https://github.com/mrvautin/squido">Github</a>
+        </nav>
+    </header>
+    <main class="container-fluid">
+      <div class="row">
+  <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+    <div class="position-sticky pt-3">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="/getting-started">
+            Getting started
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/structure">
+            Structure
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/usage-commands">
+            Usage / Commands
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/configuration">
+            Configuration
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">
+            Posts
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sitemap-and-feeds">
+            Sitemap and Feeds
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/deployment-and-hosting">
+            Deployment and hosting
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="col-md-9 ms-sm-auto col-lg-10 mt-3 px-md-4">
+    <h1>Usage / Commands</h1>
+    <p>The CLI comes with a few commands.</p>
+<pre><code class="language-bash">Usage: cli [<span class="hljs-keyword">options</span>] [<span class="hljs-keyword">command</span>]
+
+Option<span class="hljs-variable">s:</span>
+  -V, --<span class="hljs-keyword">version</span>    output the <span class="hljs-keyword">version</span> <span class="hljs-keyword">number</span>
+  -h, --<span class="hljs-keyword">help</span>       output usage information
+
+Command<span class="hljs-variable">s:</span>
+  build [<span class="hljs-keyword">options</span>]  Builds your website
+  clean            Clean your website build
+  serve [<span class="hljs-keyword">options</span>]  Serves website
+</code></pre>
+<h4>Build command</h4>
+<p>The <code>build</code> command has the following options:</p>
+<pre><code class="language-bash"><span class="hljs-symbol">Usage:</span> <span class="hljs-keyword">build </span>[options]
+
+<span class="hljs-keyword">Builds </span>your website
+<span class="hljs-symbol">
+Options:</span>
+  -c --clean  Cleans <span class="hljs-keyword">build </span><span class="hljs-keyword">directory
+</span>  -h, --help  output usage information
+</code></pre>
+<h4>Clean command</h4>
+<p>The <code>clean</code> command has the following options:</p>
+<pre><code class="language-bash">Usage: clean [<span class="hljs-meta">options</span>]
+
+Clean your website build
+
+<span class="hljs-meta">Options</span>:
+  -h, --help  <span class="hljs-meta">output</span> usage information
+</code></pre>
+<h4>Serve command</h4>
+<p>The <code>serve</code> command has the following options:</p>
+<pre><code class="language-bash"><span class="hljs-symbol">Usage:</span> serve [options]
+
+Serves website
+<span class="hljs-symbol">
+Options:</span>
+  -w --watch  Watches for changes
+  -<span class="hljs-keyword">b </span>--<span class="hljs-keyword">build </span> <span class="hljs-keyword">Builds </span>on start
+  -c --clean  Cleans <span class="hljs-keyword">build </span><span class="hljs-keyword">directory
+</span>  -h, --help  output usage information
+</code></pre>
+
+    <div class="row">
+      <div class="col-md-12 mt-3 mb-3">
+        <h5 class="text-muted">Tags:</h5>
+        <a href="/tag/usage">usage</a> |
+        <a href="/tag/commands">commands</a> |
+      </div>
+    </div>
+  </main>
+</div>
+    </main>
+    <footer class="footer mt-5 py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-muted">squido</span>
+        </div>
+    </footer>
+  </body>
+</html>

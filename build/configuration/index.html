@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Configuration</title>
+    <meta property="og:title" content="Configuration" />
+    <meta name="twitter:title" value="Configuration" />
+    <meta name="description" itemprop="description" content="Getting started with the squido configuration" />
+    <meta property="og:description" content="Getting started with the squido configuration" />
+    <meta name="twitter:description" value="Getting started with the squido configuration" />
+    <link rel="canonical" href="http://localhost:4965/configuration" />
+    <link rel="icon" type="image/png" href="/content/images/favicon.png" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://localhost:4965/configuration" />
+    <meta property="og:site_name" content="squido" />
+    <meta name="twitter:card" value="summary" />
+    <meta name="twitter:url" value="http://localhost:4965/configuration" />
+    <meta name="twitter:site" value="@mrvautin" />
+    <link rel="alternate" type="application/rss+xml" href="http://localhost:4965/rss" />
+    <link rel="alternate" type="application/atom+xml" href="http://localhost:4965/atom" />
+    <link rel="alternate" type="application/json" href="http://localhost:4965/json" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap.min.css" integrity="sha512-aqT9YD5gLuLBr6ipQAS+72o5yHKzgZbGxEh6iY8lW/r6gG14e2kBTAJb8XrxzZrMOgSmDqtLaF76T0Z6YY2IHg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/content/stylesheets/style.css">
+    <link rel="stylesheet" href="/content/stylesheets/syntax.css">
+    <script src="/content/javascripts/site.js"></script>
+  </head>
+  <body>
+    <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom">
+        <div class="h4 my-0 me-md-auto brand">
+          <a class="navbar-brand" href="/">
+              <img src="/content/images/squido.svg" alt="" width="70" height="70" class="d-inline-block align-text-top">squido
+          </a>
+        </div>
+        <nav class="my-2 my-md-0 me-md-3">
+            <a class="p-2 text-dark" href="/">Home</a>
+            <a class="p-2 text-dark" target="_blank" href="https://github.com/mrvautin/squido">Github</a>
+        </nav>
+    </header>
+    <main class="container-fluid">
+      <div class="row">
+  <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+    <div class="position-sticky pt-3">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="/getting-started">
+            Getting started
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/structure">
+            Structure
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/usage-commands">
+            Usage / Commands
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/configuration">
+            Configuration
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">
+            Posts
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sitemap-and-feeds">
+            Sitemap and Feeds
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/deployment-and-hosting">
+            Deployment and hosting
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="col-md-9 ms-sm-auto col-lg-10 mt-3 px-md-4">
+    <h1>Configuration</h1>
+    <p>An example config can be seen below. You can see that you can specify different values for different environments you run. <code>development</code> and <code>production</code> are examples but they need to match up with whatever <code>NODE_ENV</code> is set. If one is not set, the default is <code>development</code>.</p>
+<pre><code class="language-javascript"><span class="hljs-string">const</span> <span class="hljs-string">config</span> <span class="hljs-string">=</span> {
+    <span class="hljs-attr">development:</span> {
+        <span class="hljs-attr">name:</span> <span class="hljs-string">&#x27;squido&#x27;</span>,
+        <span class="hljs-attr">description:</span> <span class="hljs-string">&#x27;This is the blog description&#x27;</span>,
+        <span class="hljs-attr">twitterHandle:</span> <span class="hljs-string">&#x27;@mrvautin&#x27;</span>,
+        <span class="hljs-attr">baseUrl:</span> <span class="hljs-string">&#x27;http://localhost:4965&#x27;</span>,
+        <span class="hljs-attr">sourcesExt:</span> <span class="hljs-string">&#x27;markdown&#x27;</span>,
+        <span class="hljs-attr">sourceDir:</span> <span class="hljs-string">&#x27;source&#x27;</span>,
+        <span class="hljs-attr">buildDir:</span> <span class="hljs-string">&#x27;build&#x27;</span>,
+        <span class="hljs-attr">summaryLength:</span> <span class="hljs-number">250</span>,
+        <span class="hljs-attr">port:</span> <span class="hljs-number">4965</span>,
+        <span class="hljs-attr">pagination:</span> <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">postPerPage:</span> <span class="hljs-number">8</span>
+    },
+    <span class="hljs-attr">production:</span> {
+        <span class="hljs-attr">name:</span> <span class="hljs-string">&#x27;squido&#x27;</span>,
+        <span class="hljs-attr">description:</span> <span class="hljs-string">&#x27;This is the blog description&#x27;</span>,
+        <span class="hljs-attr">twitterHandle:</span> <span class="hljs-string">&#x27;@mrvautin&#x27;</span>,
+        <span class="hljs-attr">baseUrl:</span> <span class="hljs-string">&#x27;http://example.com&#x27;</span>,
+        <span class="hljs-attr">sourcesExt:</span> <span class="hljs-string">&#x27;markdown&#x27;</span>,
+        <span class="hljs-attr">sourceDir:</span> <span class="hljs-string">&#x27;source&#x27;</span>,
+        <span class="hljs-attr">buildDir:</span> <span class="hljs-string">&#x27;build&#x27;</span>,
+        <span class="hljs-attr">summaryLength:</span> <span class="hljs-number">250</span>,
+        <span class="hljs-attr">port:</span> <span class="hljs-number">4965</span>,
+        <span class="hljs-attr">pagination:</span> <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">postPerPage:</span> <span class="hljs-number">8</span>
+    }
+}<span class="hljs-string">;</span>
+
+<span class="hljs-string">module.exports</span> <span class="hljs-string">=</span> <span class="hljs-string">config;</span>
+</code></pre>
+<p>The configuration options are self explanatory. You can use any of the config in your template files using <code>{{meta.config.&lt;option&gt;}}</code>. Eg: For example <code>{{meta.config.baseUrl}}</code>.</p>
+<p>This is a static website so the <code>port</code> is used for spinning up a Web Server for development.</p>
+
+    <div class="row">
+      <div class="col-md-12 mt-3 mb-3">
+        <h5 class="text-muted">Tags:</h5>
+        <a href="/tag/config">config</a> |
+        <a href="/tag/configuration">configuration</a> |
+      </div>
+    </div>
+  </main>
+</div>
+    </main>
+    <footer class="footer mt-5 py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-muted">squido</span>
+        </div>
+    </footer>
+  </body>
+</html>
