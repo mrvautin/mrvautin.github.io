@@ -4,7 +4,7 @@
         <title>squido</title>
         <link>http://localhost:4965</link>
         <description>This is the blog description</description>
-        <lastBuildDate>Sat, 03 Apr 2021 08:33:54 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 03 Apr 2021 08:39:27 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>squido</generator>
         <atom:link href="http://localhost:4965/rss" rel="self" type="application/rss+xml"/>
@@ -212,10 +212,20 @@ Options:</span>
 ]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[Building]]></title>
+            <link>http://localhost:4965/building</link>
+            <guid>http://localhost:4965/building</guid>
+            <pubDate>Thu, 01 Apr 2021 15:23:00 GMT</pubDate>
+            <description><![CDATA[Getting started with the squido building]]></description>
+            <content:encoded><![CDATA[<p>The build task minifies your javascript and stylesheet files. Its recommended to setup your templates to use the <code>fileEnv</code> value to toggle between the full and minified CSS/Js depending on the environment set.</p>
+<p>Eg: <code>production</code> will set the link to <code>.min</code>.</p>
+]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[Deployment and hosting]]></title>
             <link>http://localhost:4965/deployment-and-hosting</link>
             <guid>http://localhost:4965/deployment-and-hosting</guid>
-            <pubDate>Thu, 01 Apr 2021 15:24:00 GMT</pubDate>
+            <pubDate>Thu, 01 Apr 2021 15:22:00 GMT</pubDate>
             <description><![CDATA[Getting started with the squido deploying and hosting your website]]></description>
             <content:encoded><![CDATA[<p>You can host this website anywhere static websites are supported. Some options are <a href="https://www.netlify.com">https://www.netlify.com</a> as the deployments are just dead simple.</p>
 <p>Simply connect your Git repo and set the <code>Build settings</code> settings like below:</p>

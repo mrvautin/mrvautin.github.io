@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://localhost:4965</id>
     <title>squido</title>
-    <updated>2021-04-03T08:33:54.902Z</updated>
+    <updated>2021-04-03T08:39:27.755Z</updated>
     <generator>squido</generator>
     <link rel="alternate" href="http://localhost:4965"/>
     <link rel="self" href="http://localhost:4965/atom"/>
@@ -212,10 +212,20 @@ Options:</span>
 ]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Building]]></title>
+        <id>http://localhost:4965/building</id>
+        <link href="http://localhost:4965/building"/>
+        <updated>2021-04-01T15:23:00.000Z</updated>
+        <summary type="html"><![CDATA[Getting started with the squido building]]></summary>
+        <content type="html"><![CDATA[<p>The build task minifies your javascript and stylesheet files. Its recommended to setup your templates to use the <code>fileEnv</code> value to toggle between the full and minified CSS/Js depending on the environment set.</p>
+<p>Eg: <code>production</code> will set the link to <code>.min</code>.</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Deployment and hosting]]></title>
         <id>http://localhost:4965/deployment-and-hosting</id>
         <link href="http://localhost:4965/deployment-and-hosting"/>
-        <updated>2021-04-01T15:24:00.000Z</updated>
+        <updated>2021-04-01T15:22:00.000Z</updated>
         <summary type="html"><![CDATA[Getting started with the squido deploying and hosting your website]]></summary>
         <content type="html"><![CDATA[<p>You can host this website anywhere static websites are supported. Some options are <a href="https://www.netlify.com">https://www.netlify.com</a> as the deployments are just dead simple.</p>
 <p>Simply connect your Git repo and set the <code>Build settings</code> settings like below:</p>

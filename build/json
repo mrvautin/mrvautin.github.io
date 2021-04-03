@@ -54,12 +54,20 @@
             "date_modified": "2021-04-01T15:24:00.000Z"
         },
         {
+            "id": "http://localhost:4965/building",
+            "content_html": "<p>The build task minifies your javascript and stylesheet files. Its recommended to setup your templates to use the <code>fileEnv</code> value to toggle between the full and minified CSS/Js depending on the environment set.</p>\n<p>Eg: <code>production</code> will set the link to <code>.min</code>.</p>\n",
+            "url": "http://localhost:4965/building",
+            "title": "Building",
+            "summary": "Getting started with the squido building",
+            "date_modified": "2021-04-01T15:23:00.000Z"
+        },
+        {
             "id": "http://localhost:4965/deployment-and-hosting",
             "content_html": "<p>You can host this website anywhere static websites are supported. Some options are <a href=\"https://www.netlify.com\">https://www.netlify.com</a> as the deployments are just dead simple.</p>\n<p>Simply connect your Git repo and set the <code>Build settings</code> settings like below:</p>\n<img src=\"https://raw.githubusercontent.com/mrvautin/squido/main/docs/images/netlify.png\" width=\"800px\" height=\"auto\">",
             "url": "http://localhost:4965/deployment-and-hosting",
             "title": "Deployment and hosting",
             "summary": "Getting started with the squido deploying and hosting your website",
-            "date_modified": "2021-04-01T15:24:00.000Z"
+            "date_modified": "2021-04-01T15:22:00.000Z"
         }
     ]
 }
