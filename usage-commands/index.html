@@ -42,55 +42,89 @@
   <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
     <div class="position-sticky pt-3">
       <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="/getting-started">
+            Getting started
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/structure">
+            Structure
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/usage-commands">
+            Usage / Commands
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/configuration">
+            Configuration
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">
+            Posts
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sitemap-and-feeds">
+            Sitemap and Feeds
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/deployment-and-hosting">
+            Deployment and hosting
+          </a>
+        </li>
       </ul>
     </div>
   </nav>
 
   <main class="col-md-9 ms-sm-auto col-lg-10 mt-3 px-md-4">
     <h1>Usage / Commands</h1>
-    <hr>
-<p>The CLI comes with a few commands.</p>
-<pre><code class="language-bash">Usage: cli [options] [command]
+    <p>The CLI comes with a few commands.</p>
+<pre><code class="language-bash">Usage: cli [<span class="hljs-keyword">options</span>] [<span class="hljs-keyword">command</span>]
 
-Options:
-  -V, --version    output the version number
-  -h, --help       output usage information
+Option<span class="hljs-variable">s:</span>
+  -V, --<span class="hljs-keyword">version</span>    output the <span class="hljs-keyword">version</span> <span class="hljs-keyword">number</span>
+  -h, --<span class="hljs-keyword">help</span>       output usage information
 
-Commands:
-  build [options]  Builds your website
+Command<span class="hljs-variable">s:</span>
+  build [<span class="hljs-keyword">options</span>]  Builds your website
   clean            Clean your website build
-  serve [options]  Serves website
+  serve [<span class="hljs-keyword">options</span>]  Serves website
 </code></pre>
 <h4>Build command</h4>
 <p>The <code>build</code> command has the following options:</p>
-<pre><code class="language-bash">Usage: build [options]
+<pre><code class="language-bash"><span class="hljs-symbol">Usage:</span> <span class="hljs-keyword">build </span>[options]
 
-Builds your website
-
-Options:
-  -c --clean  Cleans build directory
-  -h, --help  output usage information
+<span class="hljs-keyword">Builds </span>your website
+<span class="hljs-symbol">
+Options:</span>
+  -c --clean  Cleans <span class="hljs-keyword">build </span><span class="hljs-keyword">directory
+</span>  -h, --help  output usage information
 </code></pre>
 <h4>Clean command</h4>
 <p>The <code>clean</code> command has the following options:</p>
-<pre><code class="language-bash">Usage: clean [options]
+<pre><code class="language-bash">Usage: clean [<span class="hljs-meta">options</span>]
 
 Clean your website build
 
-Options:
-  -h, --help  output usage information
+<span class="hljs-meta">Options</span>:
+  -h, --help  <span class="hljs-meta">output</span> usage information
 </code></pre>
 <h4>Serve command</h4>
 <p>The <code>serve</code> command has the following options:</p>
-<pre><code class="language-bash">Usage: serve [options]
+<pre><code class="language-bash"><span class="hljs-symbol">Usage:</span> serve [options]
 
 Serves website
-
-Options:
+<span class="hljs-symbol">
+Options:</span>
   -w --watch  Watches for changes
-  -b --build  Builds on start
-  -c --clean  Cleans build directory
-  -h, --help  output usage information
+  -<span class="hljs-keyword">b </span>--<span class="hljs-keyword">build </span> <span class="hljs-keyword">Builds </span>on start
+  -c --clean  Cleans <span class="hljs-keyword">build </span><span class="hljs-keyword">directory
+</span>  -h, --help  output usage information
 </code></pre>
 
     <div class="row">

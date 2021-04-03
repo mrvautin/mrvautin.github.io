@@ -42,44 +42,78 @@
   <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
     <div class="position-sticky pt-3">
       <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="/getting-started">
+            Getting started
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/structure">
+            Structure
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/usage-commands">
+            Usage / Commands
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/configuration">
+            Configuration
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">
+            Posts
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sitemap-and-feeds">
+            Sitemap and Feeds
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/deployment-and-hosting">
+            Deployment and hosting
+          </a>
+        </li>
       </ul>
     </div>
   </nav>
 
   <main class="col-md-9 ms-sm-auto col-lg-10 mt-3 px-md-4">
     <h1>Configuration</h1>
-    <hr>
-<p>An example config can be seen below. You can see that you can specify different values for different environments you run. <code>development</code> and <code>production</code> are examples but they need to match up with whatever <code>NODE_ENV</code> is set. If one is not set, the default is <code>development</code>.</p>
-<pre><code class="language-javascript">const config = {
-    development: {
-        name: 'squido',
-        description: 'This is the blog description',
-        twitterHandle: '@mrvautin',
-        baseUrl: 'http://localhost:4965',
-        sourcesExt: 'markdown',
-        sourceDir: 'source',
-        buildDir: 'build',
-        summaryLength: 250,
-        port: 4965,
-        pagination: true,
-        postPerPage: 8
+    <p>An example config can be seen below. You can see that you can specify different values for different environments you run. <code>development</code> and <code>production</code> are examples but they need to match up with whatever <code>NODE_ENV</code> is set. If one is not set, the default is <code>development</code>.</p>
+<pre><code class="language-javascript"><span class="hljs-string">const</span> <span class="hljs-string">config</span> <span class="hljs-string">=</span> {
+    <span class="hljs-attr">development:</span> {
+        <span class="hljs-attr">name:</span> <span class="hljs-string">&#x27;squido&#x27;</span>,
+        <span class="hljs-attr">description:</span> <span class="hljs-string">&#x27;This is the blog description&#x27;</span>,
+        <span class="hljs-attr">twitterHandle:</span> <span class="hljs-string">&#x27;@mrvautin&#x27;</span>,
+        <span class="hljs-attr">baseUrl:</span> <span class="hljs-string">&#x27;http://localhost:4965&#x27;</span>,
+        <span class="hljs-attr">sourcesExt:</span> <span class="hljs-string">&#x27;markdown&#x27;</span>,
+        <span class="hljs-attr">sourceDir:</span> <span class="hljs-string">&#x27;source&#x27;</span>,
+        <span class="hljs-attr">buildDir:</span> <span class="hljs-string">&#x27;build&#x27;</span>,
+        <span class="hljs-attr">summaryLength:</span> <span class="hljs-number">250</span>,
+        <span class="hljs-attr">port:</span> <span class="hljs-number">4965</span>,
+        <span class="hljs-attr">pagination:</span> <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">postPerPage:</span> <span class="hljs-number">8</span>
     },
-    production: {
-        name: 'squido',
-        description: 'This is the blog description',
-        twitterHandle: '@mrvautin',
-        baseUrl: 'http://example.com',
-        sourcesExt: 'markdown',
-        sourceDir: 'source',
-        buildDir: 'build',
-        summaryLength: 250,
-        port: 4965,
-        pagination: true,
-        postPerPage: 8
+    <span class="hljs-attr">production:</span> {
+        <span class="hljs-attr">name:</span> <span class="hljs-string">&#x27;squido&#x27;</span>,
+        <span class="hljs-attr">description:</span> <span class="hljs-string">&#x27;This is the blog description&#x27;</span>,
+        <span class="hljs-attr">twitterHandle:</span> <span class="hljs-string">&#x27;@mrvautin&#x27;</span>,
+        <span class="hljs-attr">baseUrl:</span> <span class="hljs-string">&#x27;http://example.com&#x27;</span>,
+        <span class="hljs-attr">sourcesExt:</span> <span class="hljs-string">&#x27;markdown&#x27;</span>,
+        <span class="hljs-attr">sourceDir:</span> <span class="hljs-string">&#x27;source&#x27;</span>,
+        <span class="hljs-attr">buildDir:</span> <span class="hljs-string">&#x27;build&#x27;</span>,
+        <span class="hljs-attr">summaryLength:</span> <span class="hljs-number">250</span>,
+        <span class="hljs-attr">port:</span> <span class="hljs-number">4965</span>,
+        <span class="hljs-attr">pagination:</span> <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">postPerPage:</span> <span class="hljs-number">8</span>
     }
-};
+}<span class="hljs-string">;</span>
 
-module.exports = config;
+<span class="hljs-string">module.exports</span> <span class="hljs-string">=</span> <span class="hljs-string">config;</span>
 </code></pre>
 <p>The configuration options are self explanatory. You can use any of the config in your template files using <code>{{meta.config.&lt;option&gt;}}</code>. Eg: For example <code>{{meta.config.baseUrl}}</code>.</p>
 <p>This is a static website so the <code>port</code> is used for spinning up a Web Server for development.</p>

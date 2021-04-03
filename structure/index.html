@@ -42,32 +42,66 @@
   <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
     <div class="position-sticky pt-3">
       <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="/getting-started">
+            Getting started
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/structure">
+            Structure
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/usage-commands">
+            Usage / Commands
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/configuration">
+            Configuration
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">
+            Posts
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sitemap-and-feeds">
+            Sitemap and Feeds
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/deployment-and-hosting">
+            Deployment and hosting
+          </a>
+        </li>
       </ul>
     </div>
   </nav>
 
   <main class="col-md-9 ms-sm-auto col-lg-10 mt-3 px-md-4">
     <h1>Structure</h1>
-    <hr>
-<p>You can start by grabbing everything in the <code>/source</code> directory of <a href="https://github.com/mrvautin/squido/tree/main/source">here</a>.</p>
+    <p>You can start by grabbing everything in the <code>/source</code> directory of <a href="https://github.com/mrvautin/squido/tree/main/source">here</a>.</p>
 <pre><code>project
-│   config.js 
+│   config<span class="hljs-selector-class">.js</span> 
 │
 └───source
-│   index.hbs
-│   post.hbs
-│   page.hbs
-│   tag.hbs
-│   package.json
+│   index<span class="hljs-selector-class">.hbs</span>
+│   post<span class="hljs-selector-class">.hbs</span>
+│   page<span class="hljs-selector-class">.hbs</span>
+│   tag<span class="hljs-selector-class">.hbs</span>
+│   package<span class="hljs-selector-class">.json</span>
 │   │
 │   └───posts
-│   │   post1.markdown
-│   │   post2.markdown
+│   │   post1<span class="hljs-selector-class">.markdown</span>
+│   │   post2<span class="hljs-selector-class">.markdown</span>
 │   │
 │   └───layouts
-│   │   layout.hbs
+│   │   layout<span class="hljs-selector-class">.hbs</span>
 │   │
-│   └───content
+│   └───<span class="hljs-attribute">content</span>
 │       └───images
 │       │
 │       └───javascripts
