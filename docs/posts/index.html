@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Posts</title>
+    <meta property="og:title" content="Posts" />
+    <meta name="twitter:title" value="Posts" />
+    <meta name="description" itemprop="description" content="Getting started with the squido post structure" />
+    <meta property="og:description" content="Getting started with the squido post structure" />
+    <meta name="twitter:description" value="Getting started with the squido post structure" />
+    <link rel="canonical" href="http://localhost:4965/posts" />
+    <link rel="icon" type="image/png" href="/content/images/favicon.png" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://localhost:4965/posts" />
+    <meta property="og:site_name" content="squido" />
+    <meta name="twitter:card" value="summary" />
+    <meta name="twitter:url" value="http://localhost:4965/posts" />
+    <meta name="twitter:site" value="@mrvautin" />
+    <link rel="alternate" type="application/rss+xml" href="http://localhost:4965/rss" />
+    <link rel="alternate" type="application/atom+xml" href="http://localhost:4965/atom" />
+    <link rel="alternate" type="application/json" href="http://localhost:4965/json" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap.min.css" integrity="sha512-aqT9YD5gLuLBr6ipQAS+72o5yHKzgZbGxEh6iY8lW/r6gG14e2kBTAJb8XrxzZrMOgSmDqtLaF76T0Z6YY2IHg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/content/stylesheets/style.css">
+    <link rel="stylesheet" href="/content/stylesheets/syntax.css">
+    <script src="/content/javascripts/site.js"></script>
+  </head>
+  <body>
+    <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom">
+        <div class="h4 my-0 me-md-auto brand">
+          <a class="navbar-brand" href="/">
+              <img src="/content/images/squido.svg" alt="" width="70" height="70" class="d-inline-block align-text-top">squido
+          </a>
+        </div>
+        <nav class="my-2 my-md-0 me-md-3">
+            <a class="p-2 text-dark" href="/">Home</a>
+            <a class="p-2 text-dark" target="_blank" href="https://github.com/mrvautin/squido">Github</a>
+        </nav>
+    </header>
+    <main class="container-fluid">
+      <div class="row">
+  <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+    <div class="position-sticky pt-3">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="/getting-started">
+            Getting started
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/structure">
+            Structure
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/usage-commands">
+            Usage / Commands
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/configuration">
+            Configuration
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">
+            Posts
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sitemap-and-feeds">
+            Sitemap and Feeds
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/building">
+            Building
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/deployment-and-hosting">
+            Deployment and hosting
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="col-md-9 ms-sm-auto col-lg-10 mt-3 px-md-4">
+    <h1>Posts</h1>
+    <p>Posts have a meta data component at the top of the file which directs how the file is built. The meta data is <code>yaml</code> formatted and sits between two <code>---</code> tags. Eg:</p>
+<pre><code class="language-yaml"><span class="hljs-meta">---</span>
+<span class="hljs-attr">title:</span> <span class="hljs-string">Caede</span> <span class="hljs-string">virides</span> <span class="hljs-string">oculos</span> <span class="hljs-string">armentis</span>
+<span class="hljs-attr">permalink:</span> <span class="hljs-string">caede-virides-oculos-armentis</span>
+<span class="hljs-attr">description:</span> <span class="hljs-string">Caede</span> <span class="hljs-string">virides</span> <span class="hljs-string">oculos</span> <span class="hljs-string">armentis</span>
+<span class="hljs-attr">date:</span> <span class="hljs-string">&#x27;2021-03-11 19:17:00&#x27;</span>
+<span class="hljs-attr">ignore:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">hidden:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">tags:</span> 
+  <span class="hljs-bullet">-</span> <span class="hljs-string">alter</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-string">tradere</span>
+<span class="hljs-meta">---
+</span></code></pre>
+<p>You can add any data values your like but the example layouts uses the <code>title</code> and <code>description</code> for SEO for page title.</p>
+<p>New meta data values can be access in the layouts using <code>{{meta.&lt;new value&gt;}}</code>.</p>
+<p>The permalink is required. Its used to build the URL for your website: Eg. The above will output a post at: <code>https://example.com/caede-virides-oculos-armentis</code></p>
+<p>The <code>ignore</code> and <code>hidden</code> are optional tags for controlling the visibility of posts.</p>
+<ul>
+<li><code>ignore</code>: If set to <code>true</code>, the post will not be in the pagination and won't show on the index page.</li>
+<li><code>hidden</code>: If set to <code>true</code>, the post will not be in the sitemap and RSS feeds.</li>
+</ul>
+
+    <div class="row">
+      <div class="col-md-12 mt-3 mb-3">
+        <h5 class="text-muted">Tags:</h5>
+        <a href="/tag/posts">posts</a> |
+      </div>
+    </div>
+  </main>
+</div>
+    </main>
+    <footer class="footer mt-5 py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-muted">squido</span>
+        </div>
+    </footer>
+  </body>
+</html>
